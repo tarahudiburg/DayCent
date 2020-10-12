@@ -1,0 +1,1211 @@
+#
+#  Creates "DailyDayCent_muvps.exe" Windows 64-bit executable 
+#  (DailyDayCent with methanogenesis, UV litter degradation, photosynthesis,
+#  and snags)
+#  Melannie Hartman
+#  September 21, 2018
+
+
+# For Debugging on Rubel
+#FFLAGS       = -c -g -fno-underscoring -fbounds-check $(BLINCLINK) $(COMPFLAGS)
+#FFLAGS       = -c -g -fno-underscoring -fcaller-saves -Wall $(BLINCLINK) $(COMPFLAGS)
+#FFLAGS       = -c -g -m32 -fno-underscoring -fcaller-saves -Wall $(BLINCLINK) $(COMPFLAGS)
+FFLAGS       = -c -g -fno-underscoring -fcaller-saves -Wall $(BLINCLINK) $(COMPFLAGS)
+
+# For GNU ansi C with debugging
+#CFLAGS    =  -c -g -ansi -fbounds-check
+#CFLAGS    =  -c -g -ansi -fcaller-saves -Wall
+#CFLAGS    =  -c -g -m32 -ansi -fcaller-saves -Wall
+CFLAGS    =  -c -g -ansi -fcaller-saves -Wall
+
+COMPGCC  = /data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-
+#COMPGCC  = /data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-                # unix 64 bit windows
+#COMPGCC  = /data/paustian/Century/bin/MinGW2013/bin/x86_64-w64-mingw32-
+#COMPGCC  = /usr/local/mingw-w32-bin_i686-darwin_20130414/bin/i686-w64-mingw32-     # OsX 32 bit windows
+#COMPGCC  = /usr/local/mingw-w64-bin_i686-darwin_20130622/bin/x86_64-w64-mingw32-   # OsX 32 bit windows
+
+FCMD   = $(COMPGCC)gfortran
+CCMD   = $(COMPGCC)gcc
+CPP    = $(COMPGCC)cpp
+LD     = $(COMPGCC)gfortran
+AR     = $(COMPGCC)ar
+
+STATF	= -static
+
+ILIBS = -L/usr/lib
+LIBS = -lm
+
+COMMAND= DailyDayCent_muvps.exe
+
+# DailyDayCent_muvp with methanogenesis, UV litter degradation, photosynthesis, and snags  
+
+O = Obj_Win64
+
+OBJS=	${O}/adjlig.o \
+	${O}/adjustpar.o \
+	${O}/agdrat.o \
+	${O}/anerob.o \
+	${O}/annacc.o \
+	${O}/balanceN.o \
+	${O}/bgdrat.o \
+	${O}/c_shwave.o \
+	${O}/calcdefac.o \
+	${O}/calciv.o \
+	${O}/calcpet.o \
+	${O}/calcPhotosyn.o \
+	${O}/calcSrad.o \
+	${O}/candec.o \
+	${O}/carctanf.o \
+	${O}/ckdata.o \
+	${O}/climscale.o \
+	${O}/closefiles.o \
+	${O}/cmplig.o \
+	${O}/cmpnfrac.o\
+	${O}/co2eff.o \
+	${O}/crop.o \
+	${O}/cropDynC.o \
+	${O}/cropin.o \
+	${O}/csa_detiv.o \
+	${O}/csa_main.o \
+	${O}/csched.o \
+	${O}/cultin.o \
+	${O}/cultiv.o \
+	${O}/cutrtn.o \
+	${O}/cycle.o \
+	${O}/dailymoist.o \
+	${O}/declig.o \
+	${O}/decomp.o \
+	${O}/dedrem.o \
+	${O}/default.o \
+	${O}/denitrify.o \
+	${O}/diffusiv.o \
+	${O}/droot.o \
+	${O}/dshoot.o \
+	${O}/eachyr.o \
+	${O}/erosn.o \
+	${O}/esched.o \
+	${O}/extend.o \
+	${O}/falstd.o \
+	${O}/ferr.o \
+	${O}/fertin.o \
+	${O}/firein.o \
+	${O}/firrtn.o \
+	${O}/fixin.o \
+	${O}/floclr.o \
+	${O}/floclr_double.o \
+	${O}/floclr_double_in.o \
+	${O}/floclr_double_out.o \
+	${O}/flow.o \
+	${O}/flow_double.o \
+	${O}/flow_double_in.o \
+	${O}/flow_double_out.o \
+	${O}/flowd.o \
+	${O}/flowd_double.o \
+	${O}/flowd_double_in.o \
+	${O}/flowd_double_out.o \
+	${O}/flowup.o \
+	${O}/flowup_double.o \
+	${O}/flowup_double_in.o \
+	${O}/flowup_double_out.o \
+	${O}/fltce.o \
+	${O}/fracbslos.o \
+	${O}/fracis.o \
+	${O}/frem.o \
+	${O}/froota.o \
+	${O}/fsfunc.o \
+	${O}/getdiff.o \
+	${O}/getsoilprop.o \
+	${O}/getswc.o \
+	${O}/getwth.o \
+	${O}/gpdf.o \
+	${O}/grazin.o \
+	${O}/grazrst.o \
+	${O}/grem.o \
+	${O}/grochk.o \
+	${O}/growth.o \
+	${O}/h2oflux.o \
+	${O}/harvin.o \
+	${O}/harvst.o \
+	${O}/hwdrain.o \
+	${O}/initdaily.o \
+	${O}/initialize.o \
+	${O}/initlyrs.o \
+	${O}/initprod.o \
+	${O}/initsite_tg.o \
+	${O}/initsrad.o \
+	${O}/initsw.o \
+	${O}/inprac.o \
+	${O}/irrgin.o \
+	${O}/irrigt.o \
+	${O}/killiv.o \
+	${O}/killrt.o \
+	${O}/lacalc.o \
+	${O}/laprod.o \
+	${O}/leachdly.o \
+	${O}/leafa.o \
+	${O}/line.o \
+	${O}/litburn.o \
+	${O}/litdec.o \
+	${O}/litstcrev.o \
+	${O}/livrem.o \
+	${O}/maxswpot.o \
+	${O}/message.o \
+	${O}/methane_emission.o \
+	${O}/methane_oxidation.o \
+	${O}/methane_production.o \
+	${O}/mnracc.o \
+	${O}/mthacc.o \
+	${O}/mthprod.o \
+	${O}/nitrify.o\
+	${O}/nox_pulse.o\
+	${O}/nscale.o \
+	${O}/nutrlm.o \
+	${O}/omadin.o \
+	${O}/omadscale.o \
+	${O}/parse.o \
+	${O}/partit.o \
+	${O}/petrad.o \
+	${O}/pevapdly.o \
+	${O}/photodecomp.o \
+	${O}/phshift.o \
+	${O}/pi_funcs.o \
+	${O}/potbse.o \
+	${O}/potbst.o \
+	${O}/potcrp.o \
+	${O}/potfor.o \
+	${O}/potprod.o \
+	${O}/pprdwc.o \
+	${O}/prcgrw.o \
+	${O}/prelim.o \
+	${O}/pschem.o \
+	${O}/pteevap.o \
+	${O}/rainflux.o \
+	${O}/ramp.o \
+	${O}/readblk.o \
+	${O}/respir.o \
+	${O}/restrp.o \
+	${O}/rtimp.o \
+	${O}/savarp.o \
+	${O}/schedl.o \
+	${O}/setamov.o \
+	${O}/setasmos.o \
+	${O}/setlyrs.o \
+	${O}/showlyrs.o \
+	${O}/showminrl.o \
+	${O}/simsom.o \
+	${O}/sitein.o \
+	${O}/sitein_ext.o \
+	${O}/sitein_grid.o \
+	${O}/snowcent.o \
+	${O}/snowmodel.o \
+	${O}/soilos.o \
+	${O}/soiltemp.o \
+	${O}/soiltransp.o \
+	${O}/somdec.o \
+	${O}/stdedrem.o \
+	${O}/sumcar.o \
+	${O}/surftemp.o \
+	${O}/svapor.o \
+	${O}/swpotentl.o \
+	${O}/tanfunc.o \
+	${O}/tcalc.o \
+	${O}/tgmodel.o \
+	${O}/therm.o \
+	${O}/treeDynC.o \
+	${O}/treegrow.o \
+	${O}/treein.o \
+	${O}/trees.o \
+	${O}/tremin.o \
+	${O}/trwtavg.o \
+	${O}/updateN.o \
+	${O}/watrate.o \
+	${O}/watrbal.o \
+	${O}/watreqn.o \
+	${O}/watrflow.o \
+	${O}/watrlit.o \
+	${O}/watrstcr.o \
+	${O}/wdeath.o \
+	${O}/wfalstd.o \
+	${O}/wfps.o \
+	${O}/wfunc_pulse.o \
+	${O}/woodec.o \
+	${O}/wrtbin.o \
+	${O}/wrtbio.o \
+	${O}/wrtcflows.o \
+	${O}/wrtco2.o \
+	${O}/wrtdaily.o \
+	${O}/wrtdcsip.o \
+	${O}/wrtdeadc.o \
+	${O}/wrtdels.o \
+	${O}/wrtextsite.o \
+	${O}/wrtdN2lyr.o \
+	${O}/wrtdN2Olyr.o \
+	${O}/wrtharvest.o \
+	${O}/wrtlivec.o \
+	${O}/wrtmethane.o \
+	${O}/wrtnflux.o \
+	${O}/wrtpsyn.o \
+	${O}/wrtresp.o \
+	${O}/wrtsoilc.o \
+	${O}/wrtsoiln.o \
+	${O}/wrtstemp.o \
+	${O}/wrtsummary.o \
+	${O}/wrtswc.o \
+	${O}/wrtsysc.o \
+	${O}/wrttgmonth.o \
+	${O}/wrtwflux.o \
+	${O}/wrtwfps.o \
+	${O}/wrtyearsum.o \
+	${O}/wrtyrcflows.o \
+	${O}/wthini.o 
+
+$(COMMAND):     $(OBJS)
+	$(LD) -o $(COMMAND) $(OBJS) $(STATF) $(LIBS)
+
+clean:
+	/bin/rm -f $(OBJS)/%.o core
+
+${O}/adjlig.o:	adjlig.f
+	${FCMD} ${FFLAGS} adjlig.f
+	mv adjlig.o ${O}
+
+${O}/adjustpar.o:	adjustpar.f jday.inc parfx.inc const.inc
+	${FCMD} ${FFLAGS} adjustpar.f
+	mv adjustpar.o ${O}
+
+${O}/agdrat.o:	agdrat.f
+	${FCMD} ${FFLAGS} agdrat.f
+	mv agdrat.o ${O}
+
+${O}/anerob.o:	anerob.f
+	${FCMD} ${FFLAGS} anerob.f
+	mv anerob.o ${O}
+
+${O}/annacc.o:	annacc.f cflows.inc const.inc monprd.inc plot1.inc plot2.inc \
+	plot4.inc param.inc
+	${FCMD} ${FFLAGS} annacc.f
+	mv annacc.o ${O}
+
+${O}/balanceN.o:	balanceN.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} balanceN.c
+	mv balanceN.o ${O}
+
+${O}/bgdrat.o:	bgdrat.f
+	${FCMD} ${FFLAGS} bgdrat.f
+	mv bgdrat.o ${O}
+
+${O}/c_shwave.o:	c_shwave.c swconst.h
+	${CCMD} ${CFLAGS} c_shwave.c
+	mv c_shwave.o ${O}
+
+${O}/calcdefac.o:	calcdefac.c soilwater.h swconst.h n2o_model.h
+	${CCMD} ${CFLAGS} calcdefac.c
+	mv calcdefac.o ${O}
+
+${O}/calciv.o:	calciv.f chrvar.inc const.inc ligvar.inc npool.inc param.inc \
+	parcp.inc parfs.inc plot1.inc plot2.inc plot3.inc potent.inc \
+	seq.inc site.inc wth.inc zztim.inc
+	${FCMD} ${FFLAGS} calciv.f
+	mv calciv.o ${O}
+
+${O}/calcpet.o:	calcpet.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} calcpet.c
+	mv calcpet.o ${O}
+
+${O}/calcPhotosyn.o:	calcPhotosyn.c calcPhotosyn.h
+	${CCMD} ${CFLAGS} calcPhotosyn.c
+	mv calcPhotosyn.o ${O}
+
+${O}/calcSrad.o:	calcSrad.c calcSrad.h
+	${CCMD} ${CFLAGS} calcSrad.c
+	mv calcSrad.o ${O}
+
+${O}/candec.o:	candec.f const.inc
+	${FCMD} ${FFLAGS} candec.f
+	mv candec.o ${O}
+
+${O}/carctanf.o:	carctanf.f pi.inc
+	${FCMD} ${FFLAGS} carctanf.f
+	mv carctanf.o ${O}
+
+${O}/ckdata.o:	ckdata.f
+	${FCMD} ${FFLAGS} ckdata.f
+	mv ckdata.o ${O}
+
+${O}/climscale.o:	climscale.f wth.inc
+	${FCMD} ${FFLAGS} climscale.f
+	mv climscale.o ${O}
+
+${O}/closefiles.o:	closefiles.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} closefiles.c
+	mv closefiles.o ${O}
+
+${O}/cmplig.o:	cmplig.f const.inc param.inc wth.inc
+	${FCMD} ${FFLAGS} cmplig.f
+	mv cmplig.o ${O}
+
+${O}/cmpnfrac.o:	cmpnfrac.c swconst.h
+	${CCMD} ${CFLAGS} cmpnfrac.c
+	mv cmpnfrac.o ${O}
+
+${O}/co2eff.o:	co2eff.f const.inc param.inc parfx.inc plot1.inc
+	${FCMD} ${FFLAGS} co2eff.f
+	mv co2eff.o ${O}
+
+${O}/crop.o:	crop.f const.inc dovars.inc fertil.inc ligvar.inc \
+	param.inc parcp.inc plot1.inc plot2.inc timvar.inc
+	${FCMD} ${FFLAGS} crop.f
+	mv crop.o ${O}
+
+${O}/cropDynC.o:	cropDynC.f comput.inc const.inc param.inc parcp.inc \
+	parfx.inc plot1.inc potent.inc
+	${FCMD} ${FFLAGS} cropDynC.f
+	mv cropDynC.o ${O}
+
+${O}/cropin.o:	cropin.f chrvar.inc const.inc isovar.inc ligvar.inc \
+	param.inc parcp.inc parfs.inc parfx.inc pheno.inc photosyn.inc \
+	plot1.inc seq.inc
+	${FCMD} ${FFLAGS} cropin.f
+	mv cropin.o ${O}
+
+${O}/csa_detiv.o:	csa_detiv.f chrvar.inc const.inc doubles.inc \
+	dovars.inc fertil.inc jday.inc npool.inc param.inc parcp.inc \
+	parfs.inc parfx.inc plot1.inc plot3.inc potent.inc seq.inc \
+	site.inc t0par.inc timvar.inc wth.inc zztim.inc
+	${FCMD} ${FFLAGS} csa_detiv.f 
+	mv csa_detiv.o ${O}
+
+${O}/csa_main.o:	csa_main.f cflows.inc const.inc dovars.inc jday.inc \
+	monprd.inc param.inc t0par.inc timvar.inc wth.inc zztim.inc
+	${FCMD} ${FFLAGS} csa_main.f
+	mv csa_main.o ${O}
+
+${O}/csched.o:	csched.f const.inc zztim.inc
+	${FCMD} ${FFLAGS} csched.f
+	mv csched.o ${O}
+
+${O}/cultin.o:	cultin.f parcp.inc
+	${FCMD} ${FFLAGS} cultin.f
+	mv cultin.o ${O}
+
+${O}/cultiv.o:	cultiv.f const.inc param.inc parcp.inc plot1.inc plot2.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} cultiv.f
+	mv cultiv.o ${O}
+
+${O}/cutrtn.o:	cutrtn.f const.inc forrem.inc param.inc parfs.inc plot1.inc \
+	plot2.inc plot3.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} cutrtn.f
+	mv cutrtn.o ${O}
+
+${O}/cycle.o:	cycle.f const.inc dovars.inc plot2.inc plot3.inc plot4.inc
+	${FCMD} ${FFLAGS} cycle.f
+	mv cycle.o ${O}
+
+${O}/dailymoist.o:	dailymoist.f cflows.inc const.inc doubles.inc \
+	dovars.inc fertil.inc jday.inc monprd.inc npool.inc param.inc \
+	parcp.inc parfs.inc parfx.inc pheno.inc plot1.inc plot2.inc \
+	plot3.inc plot4.inc timvar.inc t0par.inc seq.inc site.inc wth.inc \
+	wthdaily.inc zztim.inc
+	${FCMD} ${FFLAGS} dailymoist.f
+	mv dailymoist.o ${O}
+
+${O}/declig.o:	declig.f const.inc
+	${FCMD} ${FFLAGS} declig.f
+	mv declig.o ${O}
+
+${O}/decomp.o:	decomp.f comput.inc const.inc param.inc parfx.inc plot1.inc
+	${FCMD} ${FFLAGS} decomp.f
+	mv decomp.o ${O}
+
+${O}/dedrem.o:	dedrem.f const.inc forrem.inc param.inc plot2.inc plot3.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} dedrem.f
+	mv dedrem.o ${O}
+
+${O}/default.o:	default.f chrvar.inc comput.inc const.inc doubles.inc dovars.inc \
+	dynam.inc fertil.inc forrem.inc isovar.inc jday.inc ligvar.inc \
+	monprd.inc npool.inc param.inc parcp.inc parfs.inc parfx.inc \
+	pheno.inc photosyn.inc plot1.inc plot2.inc plot3.inc plot4.inc potent.inc \
+	schvar.inc seq.inc site.inc t0par.inc timvar.inc wth.inc \
+	wthdaily.inc zztim.inc
+	${FCMD} ${FFLAGS} default.f
+	mv default.o ${O}
+
+${O}/denitrify.o:	denitrify.c n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} denitrify.c
+	mv denitrify.o ${O}
+
+${O}/diffusiv.o:	diffusiv.c
+	${CCMD} ${CFLAGS} diffusiv.c
+	mv diffusiv.o ${O}
+
+${O}/droot.o:	droot.f const.inc param.inc parcp.inc parfx.inc plot1.inc \
+	plot2.inc zztim.inc
+	${FCMD} ${FFLAGS} droot.f
+	mv droot.o ${O}
+
+${O}/dshoot.o:	dshoot.f const.inc dovars.inc param.inc parcp.inc pheno.inc \
+	plot1.inc plot2.inc zztim.inc
+	${FCMD} ${FFLAGS} dshoot.f
+	mv dshoot.o ${O}
+
+${O}/eachyr.o:	eachyr.f comput.inc const.inc dovars.inc isovar.inc \
+	ligvar.inc param.inc parcp.inc parfs.inc plot1.inc plot2.inc \
+	plot3.inc potent.inc seq.inc site.inc wth.inc zztim.inc
+	${FCMD} ${FFLAGS} eachyr.f
+	mv eachyr.o ${O}
+
+${O}/erosn.o:	erosn.f const.inc plot1.inc plot2.inc zztim.inc
+	${FCMD} ${FFLAGS} erosn.f
+	mv erosn.o ${O}
+
+${O}/esched.o:	esched.f zztim.inc
+	${FCMD} ${FFLAGS} esched.f
+	mv esched.o ${O}
+
+${O}/extend.o:	extend.f outval.inc 
+	${FCMD} ${FFLAGS} extend.f
+	mv extend.o ${O}
+
+${O}/falstd.o:	falstd.f const.inc param.inc parcp.inc plot1.inc
+	${FCMD} ${FFLAGS} falstd.f
+	mv falstd.o ${O}
+
+${O}/ferr.o:	ferr.c flow.h
+	${CCMD} ${CFLAGS} ferr.c
+	mv ferr.o ${O}
+
+${O}/fertin.o:	fertin.f const.inc fertil.inc npool.inc
+	${FCMD} ${FFLAGS} fertin.f
+	mv fertin.o ${O}
+
+${O}/firein.o:	firein.f const.inc parcp.inc
+	${FCMD} ${FFLAGS} firein.f
+	mv firein.o ${O}
+
+${O}/firrtn.o:	firrtn.f const.inc forrem.inc npool.inc parfx.inc param.inc \
+	plot1.inc plot2.inc plot3.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} firrtn.f
+	mv firrtn.o ${O}
+
+${O}/fixin.o:	fixin.f const.inc parfx.inc
+	${FCMD} ${FFLAGS} fixin.f
+	mv fixin.o ${O}
+
+${O}/floclr.o:	floclr.c flow.h
+	${CCMD} ${CFLAGS} floclr.c
+	mv floclr.o ${O}
+
+${O}/floclr_double.o:	floclr_double.c flow_double.h
+	${CCMD} ${CFLAGS} floclr_double.c
+	mv floclr_double.o ${O}
+
+${O}/floclr_double_in.o:	floclr_double_in.c flow_double_in.h
+	${CCMD} ${CFLAGS} floclr_double_in.c
+	mv floclr_double_in.o ${O}
+
+${O}/floclr_double_out.o:	floclr_double_out.c flow_double_out.h
+	${CCMD} ${CFLAGS} floclr_double_out.c
+	mv floclr_double_out.o ${O}
+
+${O}/flow.o:	flow.c flow.h
+	${CCMD} ${CFLAGS} flow.c
+	mv flow.o ${O}
+
+${O}/flow_double.o:	flow_double.c flow_double.h
+	${CCMD} ${CFLAGS} flow_double.c
+	mv flow_double.o ${O}
+
+${O}/flow_double_in.o:	flow_double_in.c flow_double_in.h
+	${CCMD} ${CFLAGS} flow_double_in.c
+	mv flow_double_in.o ${O}
+
+${O}/flow_double_out.o:	flow_double_out.c flow_double_out.h
+	${CCMD} ${CFLAGS} flow_double_out.c
+	mv flow_double_out.o ${O}
+
+${O}/flowd.o:	flowd.c
+	${CCMD} ${CFLAGS} flowd.c
+	mv flowd.o ${O}
+
+${O}/flowd_double.o:	flowd_double.c
+	${CCMD} ${CFLAGS} flowd_double.c
+	mv flowd_double.o ${O}
+
+${O}/flowd_double_in.o:	flowd_double_in.c
+	${CCMD} ${CFLAGS} flowd_double_in.c
+	mv flowd_double_in.o ${O}
+
+${O}/flowd_double_out.o:	flowd_double_out.c
+	${CCMD} ${CFLAGS} flowd_double_out.c
+	mv flowd_double_out.o ${O}
+
+${O}/flowup.o:	flowup.c flow.h
+	${CCMD} ${CFLAGS} flowup.c
+	mv flowup.o ${O}
+
+${O}/flowup_double.o:	flowup_double.c flow_double.h
+	${CCMD} ${CFLAGS} flowup_double.c
+	mv flowup_double.o ${O}
+
+${O}/flowup_double_in.o:	flowup_double_in.c flow_double_in.h
+	${CCMD} ${CFLAGS} flowup_double_in.c
+	mv flowup_double_in.o ${O}
+
+${O}/flowup_double_out.o:	flowup_double_out.c flow_double_out.h
+	${CCMD} ${CFLAGS} flowup_double_out.c
+	mv flowup_double_out.o ${O}
+
+${O}/fltce.o:	fltce.f  comput.inc const.inc dovars.inc parcp.inc
+	${FCMD} ${FFLAGS} fltce.f
+	mv fltce.o ${O}
+
+${O}/fracbslos.o:	fracbslos.c 
+	${CCMD} ${CFLAGS} fracbslos.c
+	mv fracbslos.o ${O}
+
+${O}/fracis.o:	fracis.f const.inc
+	${FCMD} ${FFLAGS} fracis.f
+	mv fracis.o ${O}
+
+${O}/frem.o:		frem.f const.inc forrem.inc
+	${FCMD} ${FFLAGS} frem.f
+	mv frem.o ${O}
+
+${O}/froota.o:	froota.f const.inc dovars.inc param.inc parcp.inc parfs.inc \
+	parfx.inc plot1.inc
+	${FCMD} ${FFLAGS} froota.f
+	mv froota.o ${O}
+
+${O}/fsfunc.o:	fsfunc.f
+	${FCMD} ${FFLAGS} fsfunc.f
+	mv fsfunc.o ${O}
+
+${O}/getdiff.o:	getdiff.c 
+	${CCMD} ${CFLAGS} getdiff.c
+	mv getdiff.o ${O}
+
+${O}/getsoilprop.o:	getsoilprop.c 
+	${CCMD} ${CFLAGS} getsoilprop.c
+	mv getsoilprop.o ${O}
+
+${O}/getswc.o:	getswc.c soilwater.h
+	${CCMD} ${CFLAGS} getswc.c
+	mv getswc.o ${O}
+
+${O}/getwth.o:	getwth.f dconst.inc jday.inc
+	${FCMD} ${FFLAGS} getwth.f
+	mv getwth.o ${O}
+
+${O}/gpdf.o:	gpdf.f
+	${FCMD} ${FFLAGS} gpdf.f
+	mv gpdf.o ${O}
+
+${O}/grazin.o:	grazin.f const.inc parcp.inc
+	${FCMD} ${FFLAGS} grazin.f
+	mv grazin.o ${O}
+
+${O}/grazrst.o:	grazrst.f
+	${FCMD} ${FFLAGS} grazrst.f
+	mv grazrst.o ${O}
+
+${O}/grem.o:	grem.f const.inc dovars.inc npool.inc param.inc \
+	parcp.inc parfx.inc plot1.inc plot2.inc plot3.inc seq.inc site.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} grem.f
+	mv grem.o ${O}
+
+${O}/grochk.o:	grochk.f pheno.inc timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} grochk.f
+	mv grochk.o ${O}
+
+${O}/growth.o:	growth.f comput.inc const.inc dovars.inc fertil.inc \
+	isovar.inc monprd.inc npool.inc param.inc parcp.inc parfx.inc \
+	pheno.inc plot1.inc plot2.inc potent.inc seq.inc site.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} growth.f
+	mv growth.o ${O}
+
+${O}/h2oflux.o:	h2oflux.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} h2oflux.c
+	mv h2oflux.o ${O}
+
+${O}/harvin.o:	harvin.f parcp.inc param.inc
+	${FCMD} ${FFLAGS} harvin.f
+	mv harvin.o ${O}
+
+${O}/harvst.o:	harvst.f const.inc fertil.inc isovar.inc monprd.inc \
+	param.inc parcp.inc pheno.inc plot1.inc plot2.inc zztim.inc
+	${FCMD} ${FFLAGS} harvst.f
+	mv harvst.o ${O}
+
+${O}/hwdrain.o:	hwdrain.c swconst.h
+	${CCMD} ${CFLAGS} hwdrain.c
+	mv hwdrain.o ${O}
+
+${O}/initdaily.o:	initdaily.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} initdaily.c
+	mv initdaily.o ${O}
+
+${O}/initialize.o:	initialize.f chrvar.inc const.inc dovars.inc \
+	fertil.inc npool.inc param.inc plot1.inc plot2.inc seq.inc \
+	timvar.inc wth.inc zztim.inc
+	${FCMD} ${FFLAGS} initialize.f
+	mv initialize.o ${O}
+
+${O}/initlyrs.o:	initlyrs.c  n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} initlyrs.c
+	mv initlyrs.o ${O}
+
+${O}/initprod.o:	initprod.f const.inc pheno.inc plot1.inc plot3.inc
+	${FCMD} ${FFLAGS} initprod.f
+	mv initprod.o ${O}
+
+${O}/initsite_tg.o:	initsite_tg.c  soilwater.h swconst.h
+	${CCMD} ${CFLAGS} initsite_tg.c
+	mv initsite_tg.o ${O}
+
+${O}/initsrad.o:	initsrad.c  calcSrad.h swconst.h
+	${CCMD} ${CFLAGS} initsrad.c
+	mv initsrad.o ${O}
+
+${O}/initsw.o:	initsw.c  calcPhotosyn.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} initsw.c
+	mv initsw.o ${O}
+
+${O}/inprac.o:	inprac.f const.inc dovars.inc parcp.inc parfs.inc plot1.inc \
+	plot2.inc plot3.inc
+	${FCMD} ${FFLAGS} inprac.f
+	mv inprac.o ${O}
+
+${O}/irrgin.o:	irrgin.f parcp.inc
+	${FCMD} ${FFLAGS} irrgin.f
+	mv irrgin.o ${O}
+
+${O}/irrigt.o:	irrigt.f fertil.inc param.inc parcp.inc parfx.inc plot1.inc
+	${FCMD} ${FFLAGS} irrigt.f
+	mv irrigt.o ${O}
+
+${O}/killiv.o:	killiv.f const.inc forrem.inc param.inc parfs.inc plot2.inc \
+	plot3.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} killiv.f
+	mv killiv.o ${O}
+
+${O}/killrt.o:	killrt.f const.inc forrem.inc param.inc parfs.inc plot3.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} killrt.f
+	mv killrt.o ${O}
+
+${O}/lacalc.o:	lacalc.f 
+	${FCMD} ${FFLAGS} lacalc.f
+	mv lacalc.o ${O}
+
+${O}/laprod.o:	laprod.f
+	${FCMD} ${FFLAGS} laprod.f
+	mv laprod.o ${O}
+
+${O}/leachdly.o:	leachdly.c swconst.h
+	${CCMD} ${CFLAGS} leachdly.c
+	mv leachdly.o ${O}
+
+${O}/leafa.o:	leafa.f parfs.inc
+	${FCMD} ${FFLAGS} leafa.f
+	mv leafa.o ${O}
+
+${O}/line.o:		line.f
+	${FCMD} ${FFLAGS} line.f
+	mv line.o ${O}
+
+${O}/litburn.o:	litburn.f const.inc param.inc parcp.inc plot1.inc plot2.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} litburn.f
+	mv litburn.o ${O}
+
+${O}/litdec.o:	litdec.f cflows.inc comput.inc const.inc param.inc parfx.inc \
+	plot1.inc plot2.inc
+	${FCMD} ${FFLAGS} litdec.f
+	mv litdec.o ${O}
+
+${O}/litstcrev.o:	litstcrev.c
+	${CCMD} ${CFLAGS} litstcrev.c
+	mv litstcrev.o ${O}
+
+${O}/livrem.o:	livrem.f const.inc forrem.inc param.inc plot2.inc plot3.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} livrem.f
+	mv livrem.o ${O}
+
+${O}/maxswpot.o:	maxswpot.f parfx.inc plot1.inc site.inc
+	${FCMD} ${FFLAGS} maxswpot.f
+	mv maxswpot.o ${O}
+
+${O}/message.o:	message.f
+	${FCMD} ${FFLAGS} message.f
+	mv message.o ${O}
+
+${O}/methane_emission.o:	methane_emission.c  n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} methane_emission.c
+	mv methane_emission.o ${O}
+
+${O}/methane_oxidation.o:	methane_oxidation.c  n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} methane_oxidation.c
+	mv methane_oxidation.o ${O}
+
+${O}/methane_production.o:	methane_production.c  n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} methane_production.c
+	mv methane_production.o ${O}
+
+${O}/mnracc.o:	mnracc.f
+	${FCMD} ${FFLAGS} mnracc.f
+	mv mnracc.o ${O}
+
+${O}/mthacc.o:	mthacc.f const.inc monprd.inc param.inc plot1.inc plot2.inc \
+	plot3.inc plot4.inc
+	${FCMD} ${FFLAGS} mthacc.f
+	mv mthacc.o ${O}
+
+${O}/mthprod.o:	mthprod.f const.inc pheno.inc plot1.inc plot3.inc
+	${FCMD} ${FFLAGS} mthprod.f
+	mv mthprod.o ${O}
+
+${O}/nitrify.o:	nitrify.c n2o_model.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} nitrify.c
+	mv nitrify.o ${O}
+
+${O}/nox_pulse.o:	nox_pulse.c 
+	${CCMD} ${CFLAGS} nox_pulse.c
+	mv nox_pulse.o ${O}
+
+${O}/nscale.o:	nscale.f fertil.inc
+	${FCMD} ${FFLAGS} nscale.f
+	mv nscale.o ${O}
+
+${O}/nutrlm.o:	nutrlm.f const.inc parfs.inc potent.inc
+	${FCMD} ${FFLAGS} nutrlm.f
+	mv nutrlm.o ${O}
+
+${O}/omadin.o:	omadin.f const.inc parcp.inc
+	${FCMD} ${FFLAGS} omadin.f
+	mv omadin.o ${O}
+
+${O}/omadscale.o:	omadscale.f fertil.inc
+	${FCMD} ${FFLAGS} omadscale.f
+	mv omadscale.o ${O}
+
+${O}/parse.o:	parse.f 
+	${FCMD} ${FFLAGS} parse.f
+	mv parse.o ${O}
+
+${O}/partit.o:	partit.f const.inc npool.inc param.inc parfx.inc plot1.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} partit.f
+	mv partit.o ${O}
+
+${O}/petrad.o:	petrad.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} petrad.c
+	mv petrad.o ${O}
+
+${O}/pevapdly.o:	pevapdly.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} pevapdly.c
+	mv pevapdly.o ${O}
+
+${O}/photodecomp.o:	photodecomp.f comput.inc const.inc parcp.inc \
+	param.inc parfx.inc plot1.inc plot2.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} photodecomp.f
+	mv photodecomp.o ${O}
+
+${O}/phshift.o:	phshift.f param.inc
+	${FCMD} ${FFLAGS} phshift.f
+	mv phshift.o ${O}
+
+${O}/pi_funcs.o:	pi_funcs.c 
+	${CCMD} ${CFLAGS} pi_funcs.c
+	mv pi_funcs.o ${O}
+
+${O}/potbse.o:	potbse.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} potbse.c
+	mv potbse.o ${O}
+
+${O}/potbst.o:	potbst.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} potbst.c
+	mv potbst.o ${O}
+
+${O}/potcrp.o:	potcrp.f comput.inc const.inc dovars.inc monprd.inc param.inc \
+	parcp.inc parfx.inc plot1.inc plot3.inc potent.inc seq.inc site.inc
+	${FCMD} ${FFLAGS} potcrp.f
+	mv potcrp.o ${O}
+
+${O}/potfor.o:	potfor.f comput.inc const.inc dynam.inc monprd.inc param.inc \
+	parfs.inc parfx.inc plot1.inc plot3.inc potent.inc site.inc
+	${FCMD} ${FFLAGS} potfor.f
+	mv potfor.o ${O}
+
+${O}/potprod.o:	potprod.f comput.inc const.inc isovar.inc parcp.inc \
+	parfs.inc pheno.inc photosyn.inc plot1.inc plot2.inc plot3.inc \
+	potent.inc seq.inc timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} potprod.f
+	mv potprod.o ${O}
+
+${O}/pprdwc.o:	pprdwc.f
+	${FCMD} ${FFLAGS} pprdwc.f
+	mv pprdwc.o ${O}
+
+${O}/prcgrw.o:	prcgrw.f const.inc parcp.inc param.inc wth.inc
+	${FCMD} ${FFLAGS} prcgrw.f
+	mv prcgrw.o ${O}
+
+${O}/prelim.o:	prelim.f comput.inc const.inc dovars.inc param.inc \
+	parcp.inc parfs.inc parfx.inc pheno.inc plot1.inc plot2.inc \
+	plot3.inc seq.inc site.inc t0par.inc timvar.inc wth.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} prelim.f
+	mv prelim.o ${O}
+
+${O}/pschem.o:	pschem.f const.inc doubles.inc npool.inc param.inc \
+	parfx.inc plot1.inc site.inc zztim.inc
+	${FCMD} ${FFLAGS} pschem.f
+	mv pschem.o ${O}
+
+${O}/pteevap.o:	pteevap.c
+	${CCMD} ${CFLAGS} pteevap.c
+	mv pteevap.o ${O}
+
+${O}/rainflux.o:	rainflux.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} rainflux.c
+	mv rainflux.o ${O}
+
+${O}/ramp.o:	ramp.f
+	${FCMD} ${FFLAGS} ramp.f
+	mv ramp.o ${O}
+
+${O}/readblk.o:	readblk.f chrvar.inc const.inc schvar.inc seq.inc site.inc \
+	t0par.inc timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} readblk.f
+	mv readblk.o ${O}
+
+${O}/respir.o:	respir.f const.inc param.inc parfx.inc zztim.inc
+	${FCMD} ${FFLAGS} respir.f
+	mv respir.o ${O}
+
+${O}/restrp.o:	restrp.f const.inc fertil.inc parfx.inc potent.inc
+	${FCMD} ${FFLAGS} restrp.f
+	mv restrp.o ${O}
+
+${O}/rtimp.o:	rtimp.f
+	${FCMD} ${FFLAGS} rtimp.f
+	mv rtimp.o ${O}
+
+${O}/savarp.o:	savarp.f comput.inc const.inc param.inc plot1.inc plot2.inc \
+	plot3.inc plot4.inc
+	${FCMD} ${FFLAGS} savarp.f
+	mv savarp.o ${O}
+
+${O}/schedl.o:	schedl.f chrvar.inc const.inc dovars.inc fertil.inc \
+	param.inc parcp.inc parfs.inc plot1.inc plot3.inc schvar.inc \
+	seq.inc timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} schedl.f
+	mv schedl.o ${O}
+
+${O}/setamov.o:	setamov.c swconst.h
+	${CCMD} ${CFLAGS} setamov.c
+	mv setamov.o ${O}
+
+${O}/setasmos.o:	setasmos.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} setasmos.c
+	mv setasmos.o ${O}
+
+${O}/setlyrs.o:	setlyrs.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} setlyrs.c
+	mv setlyrs.o ${O}
+
+${O}/showlyrs.o:	showlyrs.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} showlyrs.c
+	mv showlyrs.o ${O}
+
+${O}/showminrl.o:	showminrl.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} showminrl.c
+	mv showminrl.o ${O}
+
+${O}/simsom.o:	simsom.f comput.inc const.inc dovars.inc fertil.inc \
+	isovar.inc jday.inc ligvar.inc monprd.inc npool.inc param.inc \
+	parcp.inc parfs.inc parfx.inc pheno.inc plot1.inc plot2.inc \
+	plot3.inc plot4.inc seq.inc site.inc timvar.inc wth.inc wthdaily.inc \
+	zztim.inc
+	${FCMD} ${FFLAGS} simsom.f
+	mv simsom.o ${O}
+
+${O}/sitein.o:	sitein.f const.inc doubles.inc param.inc plot1.inc \
+	plot3.inc plot4.inc site.inc wth.inc
+	${FCMD} ${FFLAGS} sitein.f
+	mv sitein.o ${O}
+
+${O}/sitein_ext.o:	sitein_ext.f const.inc doubles.inc ligvar.inc npool.inc param.inc plot1.inc \
+	plot2.inc plot3.inc site.inc wth.inc
+	${FCMD} ${FFLAGS} sitein_ext.f
+	mv sitein_ext.o ${O}
+
+${O}/sitein_grid.o:	sitein_grid.f  const.inc doubles.inc param.inc \
+	plot1.inc plot3.inc plot4.inc site.inc wth.inc
+	${FCMD} ${FFLAGS} sitein_grid.f
+	mv sitein_grid.o ${O}
+
+${O}/snowcent.o:	snowcent.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} snowcent.c
+	mv snowcent.o ${O}
+
+${O}/snowmodel.o:	snowmodel.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} snowmodel.c
+	mv snowmodel.o ${O}
+
+${O}/soilos.o:	soilos.f const.inc
+	${FCMD} ${FFLAGS} soilos.f
+	mv soilos.o ${O}
+
+${O}/soiltemp.o:	soiltemp.c stmtemp.h soilwater.h swconst.h
+	${CCMD} ${CFLAGS} soiltemp.c
+	mv soiltemp.o ${O}
+
+${O}/soiltransp.o:	soiltransp.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} soiltransp.c
+	mv soiltransp.o ${O}
+
+${O}/somdec.o:	somdec.f cflows.inc comput.inc const.inc param.inc parfx.inc \
+	plot1.inc plot2.inc seq.inc zztim.inc
+	${FCMD} ${FFLAGS} somdec.f
+	mv somdec.o ${O}
+
+${O}/stdedrem.o:	stdedrem.f const.inc forrem.inc param.inc plot2.inc  \
+	plot3.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} stdedrem.f
+	mv stdedrem.o ${O}
+
+${O}/sumcar.o:	sumcar.f plot1.inc plot2.inc plot3.inc plot4.inc
+	${FCMD} ${FFLAGS} sumcar.f
+	mv sumcar.o ${O}
+
+${O}/surftemp.o:	surftemp.c 
+	${CCMD} ${CFLAGS} surftemp.c
+	mv surftemp.o ${O}
+
+${O}/svapor.o:	svapor.c 
+	${CCMD} ${CFLAGS} svapor.c
+	mv svapor.o ${O}
+
+${O}/swpotentl.o:	swpotentl.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} swpotentl.c
+	mv swpotentl.o ${O}
+
+${O}/tanfunc.o:	tanfunc.c swconst.h
+	${CCMD} ${CFLAGS} tanfunc.c
+	mv tanfunc.o ${O}
+
+${O}/tcalc.o:	tcalc.f 
+	${FCMD} ${FFLAGS} tcalc.f
+	mv tcalc.o ${O}
+
+${O}/tgmodel.o:	tgmodel.c soilwater.h swconst.h n2o_model.h
+	${CCMD} ${CFLAGS} tgmodel.c
+	mv tgmodel.o ${O}
+
+${O}/therm.o:	therm.c  swconst.h
+	${CCMD} ${CFLAGS} therm.c
+	mv therm.o ${O}
+
+${O}/treeDynC.o:	treeDynC.f comput.inc const.inc param.inc parfs.inc \
+	parfx.inc pheno.inc plot1.inc plot3.inc potent.inc
+	${FCMD} ${FFLAGS} treeDynC.f
+	mv treeDynC.o ${O}
+
+${O}/treegrow.o:	treegrow.f const.inc dynam.inc fertil.inc \
+	isovar.inc monprd.inc npool.inc param.inc parfs.inc parfx.inc \
+	pheno.inc plot1.inc plot2.inc plot3.inc potent.inc zztim.inc
+	${FCMD} ${FFLAGS} treegrow.f
+	mv treegrow.o ${O}
+
+${O}/treein.o:	treein.f chrvar.inc const.inc dynam.inc isovar.inc \
+	param.inc parcp.inc parfs.inc parfx.inc pheno.inc photosyn.inc \
+	site.inc
+	${FCMD} ${FFLAGS} treein.f
+	mv treein.o ${O}
+
+${O}/trees.o:	trees.f const.inc dovars.inc fertil.inc param.inc parcp.inc \
+	plot1.inc plot2.inc timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} trees.f
+	mv trees.o ${O}
+
+${O}/tremin.o:	tremin.f const.inc forrem.inc
+	${FCMD} ${FFLAGS} tremin.f
+	mv tremin.o ${O}
+
+${O}/trwtavg.o:	trwtavg.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} trwtavg.c
+	mv trwtavg.o ${O}
+
+${O}/updateN.o:	updateN.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} updateN.c
+	mv updateN.o ${O}
+
+${O}/watrate.o:	watrate.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} watrate.c
+	mv watrate.o ${O}
+
+${O}/watrbal.o:	watrbal.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} watrbal.c
+	mv watrbal.o ${O}
+
+${O}/watreqn.o:	watreqn.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} watreqn.c
+	mv watreqn.o ${O}
+
+${O}/watrflow.o:	watrflow.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} watrflow.c
+	mv watrflow.o ${O}
+
+${O}/watrlit.o:	watrlit.c 
+	${CCMD} ${CFLAGS} watrlit.c
+	mv watrlit.o ${O}
+
+${O}/watrstcr.o:	watrstcr.c 
+	${CCMD} ${CFLAGS} watrstcr.c
+	mv watrstcr.o ${O}
+
+${O}/wdeath.o:	wdeath.f const.inc forrem.inc isovar.inc param.inc \
+	parfs.inc pheno.inc plot1.inc plot2.inc plot3.inc plot4.inc site.inc \
+	timvar.inc zztim.inc
+	${FCMD} ${FFLAGS} wdeath.f
+	mv wdeath.o ${O}
+
+${O}/wfalstd.o:	wfalstd.f const.inc param.inc parfs.inc plot3.inc plot4.inc zztim.inc
+	${FCMD} ${FFLAGS} wfalstd.f
+	mv wfalstd.o ${O}
+
+${O}/wfps.o:	wfps.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wfps.c
+	mv wfps.o ${O}
+
+${O}/wfunc_pulse.o:	wfunc_pulse.c
+	${CCMD} ${CFLAGS} wfunc_pulse.c
+	mv wfunc_pulse.o ${O}
+
+${O}/woodec.o:	woodec.f cflows.inc comput.inc const.inc param.inc parfs.inc \
+	parfx.inc plot1.inc plot2.inc plot3.inc plot4.inc 
+	${FCMD} ${FFLAGS} woodec.f
+	mv woodec.o ${O}
+
+${O}/wrtbin.o:	wrtbin.f outval.inc
+	${FCMD} ${FFLAGS} wrtbin.f
+	mv wrtbin.o ${O}
+
+${O}/wrtbio.o:	wrtbio.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtbio.c
+	mv wrtbio.o ${O}
+
+${O}/wrtcflows.o:	wrtcflows.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtcflows.c
+	mv wrtcflows.o ${O}
+
+${O}/wrtco2.o:	wrtco2.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtco2.c
+	mv wrtco2.o ${O}
+
+${O}/wrtdaily.o:	wrtdaily.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtdaily.c
+	mv wrtdaily.o ${O}
+
+${O}/wrtdcsip.o:	wrtdcsip.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtdcsip.c
+	mv wrtdcsip.o ${O}
+
+${O}/wrtdeadc.o:	wrtdeadc.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtdeadc.c
+	mv wrtdeadc.o ${O}
+
+${O}/wrtdels.o:	wrtdels.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtdels.c
+	mv wrtdels.o ${O}
+
+${O}/wrtextsite.o:	wrtextsite.f chrvar.inc const.inc ligvar.inc npool.inc param.inc \
+	plot1.inc plot2.inc plot3.inc plot4.inc site.inc wth.inc
+	${FCMD} ${FFLAGS} wrtextsite.f
+	mv wrtextsite.o ${O}
+
+${O}/wrtdN2lyr.o:	wrtdN2lyr.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtdN2lyr.c
+	mv wrtdN2lyr.o ${O}
+
+${O}/wrtdN2Olyr.o:	wrtdN2Olyr.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtdN2Olyr.c
+	mv wrtdN2Olyr.o ${O}
+
+${O}/wrtharvest.o:	wrtharvest.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtharvest.c
+	mv wrtharvest.o ${O}
+
+${O}/wrtlivec.o:	wrtlivec.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtlivec.c
+	mv wrtlivec.o ${O}
+
+${O}/wrtmethane.o:	wrtmethane.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtmethane.c
+	mv wrtmethane.o ${O}
+
+${O}/wrtnflux.o:	wrtnflux.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtnflux.c
+	mv wrtnflux.o ${O}
+
+${O}/wrtpsyn.o:	wrtpsyn.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtpsyn.c
+	mv wrtpsyn.o ${O}
+
+${O}/wrtresp.o:	wrtresp.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtresp.c
+	mv wrtresp.o ${O}
+
+${O}/wrtsoilc.o:	wrtsoilc.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtsoilc.c
+	mv wrtsoilc.o ${O}
+
+${O}/wrtsoiln.o:	wrtsoiln.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtsoiln.c
+	mv wrtsoiln.o ${O}
+
+${O}/wrtstemp.o:	wrtstemp.c 
+	${CCMD} ${CFLAGS} wrtstemp.c
+	mv wrtstemp.o ${O}
+
+${O}/wrtsummary.o:	wrtsummary.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtsummary.c
+	mv wrtsummary.o ${O}
+
+${O}/wrtswc.o:	wrtswc.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtswc.c
+	mv wrtswc.o ${O}
+
+${O}/wrtsysc.o:	wrtsysc.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtsysc.c
+	mv wrtsysc.o ${O}
+
+${O}/wrttgmonth.o:	wrttgmonth.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrttgmonth.c
+	mv wrttgmonth.o ${O}
+
+${O}/wrtwflux.o:	wrtwflux.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtwflux.c
+	mv wrtwflux.o ${O}
+
+${O}/wrtwfps.o:	wrtwfps.c swconst.h soilwater.h
+	${CCMD} ${CFLAGS} wrtwfps.c
+	mv wrtwfps.o ${O}
+
+${O}/wrtyearsum.o:	wrtyearsum.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtyearsum.c
+	mv wrtyearsum.o ${O}
+
+${O}/wrtyrcflows.o:	wrtyrcflows.c soilwater.h swconst.h
+	${CCMD} ${CFLAGS} wrtyrcflows.c
+	mv wrtyrcflows.o ${O}
+
+${O}/wthini.o:	wthini.f chrvar.inc
+	${FCMD} ${FFLAGS} wthini.f
+	mv wthini.o ${O}

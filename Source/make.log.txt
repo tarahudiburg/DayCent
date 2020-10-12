@@ -1,0 +1,832 @@
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   adjlig.f
+mv adjlig.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   adjustpar.f
+mv adjustpar.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   agdrat.f
+mv agdrat.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   anerob.f
+mv anerob.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   annacc.f
+mv annacc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall balanceN.c
+mv balanceN.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   bgdrat.f
+mv bgdrat.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall c_shwave.c
+mv c_shwave.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall calcdefac.c
+mv calcdefac.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   calciv.f
+mv calciv.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall calcpet.c
+mv calcpet.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall calcPhotosyn.c
+mv calcPhotosyn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall calcSrad.c
+mv calcSrad.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   candec.f
+mv candec.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   carctanf.f
+mv carctanf.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   ckdata.f
+mv ckdata.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   climscale.f
+mv climscale.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall closefiles.c
+mv closefiles.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cmplig.f
+mv cmplig.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall cmpnfrac.c
+mv cmpnfrac.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   co2eff.f
+mv co2eff.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   crop.f
+mv crop.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cropDynC.f
+mv cropDynC.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cropin.f
+mv cropin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   csa_detiv.f 
+mv csa_detiv.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   csa_main.f
+mv csa_main.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   csched.f
+mv csched.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cultin.f
+mv cultin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cultiv.f
+mv cultiv.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cutrtn.f
+mv cutrtn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   cycle.f
+mv cycle.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   dailymoist.f
+dailymoist.f:848.15:
+
+      sradKJ = srad(curday)*W2KJ                                        
+               1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:979.18:
+
+      esrsnk(N) = esrsnk(N) + NOflux + Nn2oflux +Dn2oflux + Dn2flux     
+                  1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:992.17:
+
+      N2O_year = N2O_year + (Nn2oflux+Dn2oflux)*SCALE                   
+                 1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:993.16:
+
+      NO_year = NO_year + NOflux*SCALE                                  
+                1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:994.16:
+
+      N2_year = N2_year + Dn2flux*SCALE                                 
+                1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:995.22:
+
+      CH4_oxid_year = CH4_oxid_year + CH4_oxid                          
+                      1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1022.18:
+
+      N2O_month = N2O_month + (Nn2oflux+Dn2oflux)*SCALE                 
+                  1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1023.17:
+
+      NO_month = NO_month + NOflux*SCALE                                
+                 1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1024.17:
+
+      N2_month = N2_month + Dn2flux*SCALE                               
+                 1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1025.23:
+
+      CH4_oxid_month = CH4_oxid_month + CH4_oxid                        
+                       1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1028.15:
+
+      n2oacc = n2oacc + (Nn2oflux+Dn2oflux)                             
+               1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1029.22:
+
+      n2omth(month) = n2omth(month) + (Nn2oflux+Dn2oflux)               
+                      1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+dailymoist.f:1074.20:
+
+      minerl(1,N) = minerl(1,N) - Nn2oflux - Dn2oflux - Dn2flux -       
+                    1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv dailymoist.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   declig.f
+mv declig.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   decomp.f
+mv decomp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   dedrem.f
+mv dedrem.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   default.f
+mv default.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall denitrify.c
+mv denitrify.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall diffusiv.c
+mv diffusiv.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   droot.f
+mv droot.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   dshoot.f
+mv dshoot.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   eachyr.f
+mv eachyr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   erosn.f
+mv erosn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   esched.f
+mv esched.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   extend.f
+mv extend.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   falstd.f
+mv falstd.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall ferr.c
+mv ferr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   fertin.f
+mv fertin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   firein.f
+mv firein.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   firrtn.f
+mv firrtn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   fixin.f
+mv fixin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall floclr.c
+mv floclr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall floclr_double.c
+mv floclr_double.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall floclr_double_in.c
+mv floclr_double_in.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall floclr_double_out.c
+mv floclr_double_out.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flow.c
+mv flow.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flow_double.c
+mv flow_double.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flow_double_in.c
+mv flow_double_in.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flow_double_out.c
+mv flow_double_out.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowd.c
+mv flowd.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowd_double.c
+mv flowd_double.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowd_double_in.c
+mv flowd_double_in.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowd_double_out.c
+mv flowd_double_out.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowup.c
+mv flowup.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowup_double.c
+mv flowup_double.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowup_double_in.c
+mv flowup_double_in.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall flowup_double_out.c
+mv flowup_double_out.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   fltce.f
+mv fltce.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall fracbslos.c
+mv fracbslos.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   fracis.f
+mv fracis.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   frem.f
+mv frem.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   froota.f
+mv froota.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   fsfunc.f
+mv fsfunc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall getdiff.c
+mv getdiff.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall getsoilprop.c
+getsoilprop.c: In function ‘getsoilprop’:
+getsoilprop.c:89:13: warning: variable ‘ksat’ set but not used [-Wunused-but-set-variable]
+       float ksat;
+             ^
+mv getsoilprop.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall getswc.c
+mv getswc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   getwth.f
+mv getwth.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   gpdf.f
+mv gpdf.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   grazin.f
+mv grazin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   grazrst.f
+mv grazrst.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   grem.f
+mv grem.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   grochk.f
+mv grochk.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   growth.f
+growth.f:227.14:
+
+     &        (cmrspdyflux(ipart) / totmrspdyflux) *                    
+              1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv growth.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall h2oflux.c
+h2oflux.c: In function ‘h2oflux’:
+h2oflux.c:203:19: warning: variable ‘rainDay’ set but not used [-Wunused-but-set-variable]
+       static int  rainDay[5] = {0, 0, 0, 0, 0};
+                   ^
+mv h2oflux.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   harvin.f
+mv harvin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   harvst.f
+mv harvst.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall hwdrain.c
+mv hwdrain.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall initdaily.c
+mv initdaily.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   initialize.f
+mv initialize.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall initlyrs.c
+mv initlyrs.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   initprod.f
+mv initprod.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall initsite_tg.c
+mv initsite_tg.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall initsrad.c
+mv initsrad.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall initsw.c
+mv initsw.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   inprac.f
+mv inprac.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   irrgin.f
+mv irrgin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   irrigt.f
+mv irrigt.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   killrt.f
+mv killrt.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   lacalc.f
+mv lacalc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   laprod.f
+mv laprod.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall leachdly.c
+mv leachdly.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   leafa.f
+mv leafa.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   line.f
+mv line.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   litburn.f
+mv litburn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   litdec.f
+mv litdec.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall litstcrev.c
+mv litstcrev.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   livrem.f
+mv livrem.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   maxswpot.f
+maxswpot.f:53.19:
+
+          swptnl = (psis / (base**expon)) / BAR2CM                      
+                   1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv maxswpot.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   message.f
+mv message.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall methane_emission.c
+mv methane_emission.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall methane_oxidation.c
+mv methane_oxidation.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall methane_production.c
+methane_production.c: In function ‘methane_production’:
+methane_production.c:106:13: warning: unused variable ‘VI’ [-Wunused-variable]
+       float VI = 1.0f;
+             ^
+mv methane_production.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   mnracc.f
+mv mnracc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   mthacc.f
+mv mthacc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall nitrify.c
+mv nitrify.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall nox_pulse.c
+mv nox_pulse.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   nscale.f
+mv nscale.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   nutrlm.f
+mv nutrlm.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   omadin.f
+mv omadin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   omadscale.f
+mv omadscale.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   parse.f
+parse.f:222.19:
+
+        READREAL = Cfp                                                  
+                   1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+parse.f:263.18:
+
+            Cex = Cex * 10 + J                                          
+                  1
+Warning: Possible change of value in conversion from INTEGER(4) to INTEGER(2) at (1)
+parse.f:266.30:
+
+            IF (INTEG) Cdec = Cdec+1                                    
+                              1
+Warning: Possible change of value in conversion from INTEGER(4) to INTEGER(2) at (1)
+parse.f:270.35:
+
+            IF (.NOT.INTEG) Cdec = Cdec-1                               
+                                   1
+Warning: Possible change of value in conversion from INTEGER(4) to INTEGER(2) at (1)
+parse.f:276.35:
+
+            IF (.NOT.INTEG) Cdec = Cdec-1                               
+                                   1
+Warning: Possible change of value in conversion from INTEGER(4) to INTEGER(2) at (1)
+parse.f:336.14:
+
+        Cip = Cfp                                                       
+              1
+Warning: Possible change of value in conversion from REAL(8) to INTEGER(4) at (1)
+parse.f:348.19:
+
+        readreal = Cfp                                                  
+                   1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv parse.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   partit.f
+mv partit.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall petrad.c
+mv petrad.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall pevapdly.c
+mv pevapdly.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   photodecomp.f
+mv photodecomp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   phshift.f
+mv phshift.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall pi_funcs.c
+mv pi_funcs.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall potbse.c
+mv potbse.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall potbst.c
+potbst.c: In function ‘potbst’:
+potbst.c:68:13: warning: unused variable ‘trpar1’ [-Wunused-variable]
+       float trpar1 = 12.0f; 
+             ^
+mv potbst.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   potcrp.f
+potcrp.f:126.19:
+
+        langleys = srad * ((daylength * 60 * 60) / (10000 * 4.184))     
+                   1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv potcrp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   potfor.f
+potfor.f:82.19:
+
+        langleys = srad * ((daylength * 60 * 60) / (10000 * 4.184))     
+                   1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv potfor.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   potprod.f
+potprod.f:44.36:
+
+        SUBROUTINE calcPhotosyn(srad, daytime, lai, potGrossPsn,        
+                                    1
+Warning: Variable 'srad' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:44.45:
+
+        SUBROUTINE calcPhotosyn(srad, daytime, lai, potGrossPsn,        
+                                             1
+Warning: Variable 'daytime' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:44.50:
+
+        SUBROUTINE calcPhotosyn(srad, daytime, lai, potGrossPsn,        
+                                                  1
+Warning: Variable 'lai' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:44.63:
+
+        SUBROUTINE calcPhotosyn(srad, daytime, lai, potGrossPsn,        
+                                                               1
+Warning: Variable 'potgrosspsn' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:45.36:
+
+     &                          Psyn, dTemp, dVpd, dWater,              
+                                    1
+Warning: Variable 'psyn' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:45.43:
+
+     &                          Psyn, dTemp, dVpd, dWater,              
+                                           1
+Warning: Variable 'dtemp' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:45.49:
+
+     &                          Psyn, dTemp, dVpd, dWater,              
+                                                 1
+Warning: Variable 'dvpd' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:45.57:
+
+     &                          Psyn, dTemp, dVpd, dWater,              
+                                                         1
+Warning: Variable 'dwater' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:46.40:
+
+     &                          lightEff, grwdys, aMaxScalar1,          
+                                        1
+Warning: Variable 'lighteff' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:46.48:
+
+     &                          lightEff, grwdys, aMaxScalar1,          
+                                                1
+Warning: Variable 'grwdys' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:46.61:
+
+     &                          lightEff, grwdys, aMaxScalar1,          
+                                                             1
+Warning: Variable 'amaxscalar1' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:47.43:
+
+     &                          aMaxScalar2, aMaxScalar3, aMaxScalar4,  
+                                           1
+Warning: Variable 'amaxscalar2' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:47.56:
+
+     &                          aMaxScalar2, aMaxScalar3, aMaxScalar4,  
+                                                        1
+Warning: Variable 'amaxscalar3' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:47.69:
+
+     &                          aMaxScalar2, aMaxScalar3, aMaxScalar4,  
+                                                                     1
+Warning: Variable 'amaxscalar4' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:48.36:
+
+     &                          aMax, aMaxFrac, attenuation,            
+                                    1
+Warning: Variable 'amax' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:48.46:
+
+     &                          aMax, aMaxFrac, attenuation,            
+                                              1
+Warning: Variable 'amaxfrac' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:48.59:
+
+     &                          aMax, aMaxFrac, attenuation,            
+                                                           1
+Warning: Variable 'attenuation' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:49.47:
+
+     &                          baseFolRespFrac, cFracLeaf, halfSatPar, 
+                                               1
+Warning: Variable 'basefolrespfrac' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:49.58:
+
+     &                          baseFolRespFrac, cFracLeaf, halfSatPar, 
+                                                          1
+Warning: Variable 'cfracleaf' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:49.70:
+
+     &                          baseFolRespFrac, cFracLeaf, halfSatPar, 
+                                                                      1
+Warning: Variable 'halfsatpar' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:50.41:
+
+     &                          leafCSpWt, growthDays1, growthDays2,    
+                                         1
+Warning: Variable 'leafcspwt' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:50.54:
+
+     &                          leafCSpWt, growthDays1, growthDays2,    
+                                                      1
+Warning: Variable 'growthdays1' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:50.67:
+
+     &                          leafCSpWt, growthDays1, growthDays2,    
+                                                                   1
+Warning: Variable 'growthdays2' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:51.43:
+
+     &                          growthDays3, growthDays4)               
+                                           1
+Warning: Variable 'growthdays3' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:51.56:
+
+     &                          growthDays3, growthDays4)               
+                                                        1
+Warning: Variable 'growthdays4' at (1) is a dummy argument of the BIND(C) procedure 'calcphotosyn' but may not be C interoperable
+potprod.f:82.41:
+
+        SUBROUTINE calcPsnEffects(maxTemp, minTemp, etrans, potETrans,  
+                                         1
+Warning: Variable 'maxtemp' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:82.50:
+
+        SUBROUTINE calcPsnEffects(maxTemp, minTemp, etrans, potETrans,  
+                                                  1
+Warning: Variable 'mintemp' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:82.58:
+
+        SUBROUTINE calcPsnEffects(maxTemp, minTemp, etrans, potETrans,  
+                                                          1
+Warning: Variable 'etrans' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:82.69:
+
+        SUBROUTINE calcPsnEffects(maxTemp, minTemp, etrans, potETrans,  
+                                                                     1
+Warning: Variable 'potetrans' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:83.46:
+
+     &                            average_temp, average_vpd, dTemp,     
+                                              1
+Warning: Variable 'average_temp' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:83.59:
+
+     &                            average_temp, average_vpd, dTemp,     
+                                                           1
+Warning: Variable 'average_vpd' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:83.66:
+
+     &                            average_temp, average_vpd, dTemp,     
+                                                                  1
+Warning: Variable 'dtemp' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:84.38:
+
+     &                            dVpd, dWater, daylength, vpd,         
+                                      1
+Warning: Variable 'dvpd' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:84.46:
+
+     &                            dVpd, dWater, daylength, vpd,         
+                                              1
+Warning: Variable 'dwater' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:84.57:
+
+     &                            dVpd, dWater, daylength, vpd,         
+                                                         1
+Warning: Variable 'daylength' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:84.62:
+
+     &                            dVpd, dWater, daylength, vpd,         
+                                                              1
+Warning: Variable 'vpd' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:85.41:
+
+     &                            dVpdExp, dVpdSlope, psnTMin, psnTOpt, 
+                                         1
+Warning: Variable 'dvpdexp' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:85.52:
+
+     &                            dVpdExp, dVpdSlope, psnTMin, psnTOpt, 
+                                                    1
+Warning: Variable 'dvpdslope' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:85.61:
+
+     &                            dVpdExp, dVpdSlope, psnTMin, psnTOpt, 
+                                                             1
+Warning: Variable 'psntmin' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:85.70:
+
+     &                            dVpdExp, dVpdSlope, psnTMin, psnTOpt, 
+                                                                      1
+Warning: Variable 'psntopt' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:86.43:
+
+     &                            tminslope, tminintercept, h2ogef3)    
+                                           1
+Warning: Variable 'tminslope' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:86.58:
+
+     &                            tminslope, tminintercept, h2ogef3)    
+                                                          1
+Warning: Variable 'tminintercept' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:86.67:
+
+     &                            tminslope, tminintercept, h2ogef3)    
+                                                                   1
+Warning: Variable 'h2ogef3' at (1) is a dummy argument of the BIND(C) procedure 'calcpsneffects' but may not be C interoperable
+potprod.f:230.23:
+
+            grossPsn = crpGrossPsn                                      
+                       1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+potprod.f:276.21:
+
+          grossPsn = forGrossPsn                                        
+                     1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv potprod.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   pprdwc.f
+mv pprdwc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   prcgrw.f
+mv prcgrw.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   prelim.f
+mv prelim.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   pschem.f
+mv pschem.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall pteevap.c
+mv pteevap.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall rainflux.c
+mv rainflux.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   ramp.f
+mv ramp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   readblk.f
+readblk.f:45.15:
+
+      strtyr = anint(time)                                              
+               1
+Warning: Possible change of value in conversion from REAL(4) to INTEGER(4) at (1)
+readblk.f:198.72:
+
+          typary(ttlind) = readstring(15,buffr,lch,ststrt,stend)        
+                                                                        1
+Warning: CHARACTER expression will be truncated in assignment (5/20) at (1)
+mv readblk.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   respir.f
+mv respir.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   restrp.f
+mv restrp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   rtimp.f
+mv rtimp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   savarp.f
+mv savarp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   schedl.f
+schedl.f:78.14:
+
+      crtyr = aint(time + .001)                                         
+              1
+Warning: Possible change of value in conversion from REAL(4) to INTEGER(4) at (1)
+mv schedl.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall setamov.c
+mv setamov.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall setasmos.c
+mv setasmos.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall setlyrs.c
+mv setlyrs.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall showlyrs.c
+mv showlyrs.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall showminrl.c
+mv showminrl.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   simsom.f
+mv simsom.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   sitein.f
+mv sitein.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   sitein_ext.f
+sitein_ext.f:519.3:
+
+999   continue                                                          
+   1
+Warning: Label 999 at (1) defined but not used
+mv sitein_ext.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   sitein_grid.f
+mv sitein_grid.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall snowcent.c
+mv snowcent.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall snowmodel.c
+mv snowmodel.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   soilos.f
+mv soilos.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall soiltemp.c
+mv soiltemp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall soiltransp.c
+soiltransp.c: In function ‘soiltransp’:
+soiltransp.c:70:13: warning: variable ‘crootwp’ set but not used [-Wunused-but-set-variable]
+       float crootwp;
+             ^
+mv soiltransp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   somdec.f
+mv somdec.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   sumcar.f
+mv sumcar.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall surftemp.c
+mv surftemp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall svapor.c
+mv svapor.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall swpotentl.c
+mv swpotentl.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall tanfunc.c
+mv tanfunc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   tcalc.f
+mv tcalc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall tgmodel.c
+mv tgmodel.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall therm.c
+mv therm.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   treeDynC.f
+mv treeDynC.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   treegrow.f
+treegrow.f:250.14:
+
+     &        (fmrspdyflux(ipart) / totmrspdyflux) *                    
+              1
+Warning: Possible change of value in conversion from REAL(8) to REAL(4) at (1)
+mv treegrow.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   treein.f
+mv treein.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   trees.f
+mv trees.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   tremin.f
+mv tremin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall trwtavg.c
+mv trwtavg.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall updateN.c
+mv updateN.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watrate.c
+mv watrate.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watrbal.c
+mv watrbal.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watreqn.c
+mv watreqn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watrflow.c
+mv watrflow.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watrlit.c
+mv watrlit.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall watrstcr.c
+mv watrstcr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   wdeath.f
+mv wdeath.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wfps.c
+mv wfps.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wfunc_pulse.c
+mv wfunc_pulse.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   woodec.f
+mv woodec.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   wrtbin.f
+mv wrtbin.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtbio.c
+mv wrtbio.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtcflows.c
+mv wrtcflows.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtco2.c
+mv wrtco2.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdaily.c
+mv wrtdaily.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdcsip.c
+mv wrtdcsip.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdeadc.c
+mv wrtdeadc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdels.c
+mv wrtdels.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   wrtextsite.f
+mv wrtextsite.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdN2lyr.c
+mv wrtdN2lyr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtdN2Olyr.c
+mv wrtdN2Olyr.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtharvest.c
+mv wrtharvest.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtlivec.c
+mv wrtlivec.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtmethane.c
+mv wrtmethane.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtnflux.c
+mv wrtnflux.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtpsyn.c
+mv wrtpsyn.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtresp.c
+mv wrtresp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtsoilc.c
+mv wrtsoilc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtsoiln.c
+mv wrtsoiln.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtstemp.c
+mv wrtstemp.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtsummary.c
+mv wrtsummary.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtswc.c
+mv wrtswc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtsysc.c
+mv wrtsysc.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrttgmonth.c
+mv wrttgmonth.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtwflux.c
+mv wrtwflux.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtwfps.c
+mv wrtwfps.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtyearsum.c
+mv wrtyearsum.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gcc -c -g -ansi -fcaller-saves -Wall wrtyrcflows.c
+mv wrtyrcflows.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -c -g -fno-underscoring -fcaller-saves -Wall   wthini.f
+mv wthini.o Obj_Win64
+/data/paustian/Century/bin/MinGW/bin/x86_64-w64-mingw32-gfortran -o DailyDayCent_muvp.exe Obj_Win64/adjlig.o Obj_Win64/adjustpar.o Obj_Win64/agdrat.o Obj_Win64/anerob.o Obj_Win64/annacc.o Obj_Win64/balanceN.o Obj_Win64/bgdrat.o Obj_Win64/c_shwave.o Obj_Win64/calcdefac.o Obj_Win64/calciv.o Obj_Win64/calcpet.o Obj_Win64/calcPhotosyn.o Obj_Win64/calcSrad.o Obj_Win64/candec.o Obj_Win64/carctanf.o Obj_Win64/ckdata.o Obj_Win64/climscale.o Obj_Win64/closefiles.o Obj_Win64/cmplig.o Obj_Win64/cmpnfrac.o Obj_Win64/co2eff.o Obj_Win64/crop.o Obj_Win64/cropDynC.o Obj_Win64/cropin.o Obj_Win64/csa_detiv.o Obj_Win64/csa_main.o Obj_Win64/csched.o Obj_Win64/cultin.o Obj_Win64/cultiv.o Obj_Win64/cutrtn.o Obj_Win64/cycle.o Obj_Win64/dailymoist.o Obj_Win64/declig.o Obj_Win64/decomp.o Obj_Win64/dedrem.o Obj_Win64/default.o Obj_Win64/denitrify.o Obj_Win64/diffusiv.o Obj_Win64/droot.o Obj_Win64/dshoot.o Obj_Win64/eachyr.o Obj_Win64/erosn.o Obj_Win64/esched.o Obj_Win64/extend.o Obj_Win64/falstd.o Obj_Win64/ferr.o Obj_Win64/fertin.o Obj_Win64/firein.o Obj_Win64/firrtn.o Obj_Win64/fixin.o Obj_Win64/floclr.o Obj_Win64/floclr_double.o Obj_Win64/floclr_double_in.o Obj_Win64/floclr_double_out.o Obj_Win64/flow.o Obj_Win64/flow_double.o Obj_Win64/flow_double_in.o Obj_Win64/flow_double_out.o Obj_Win64/flowd.o Obj_Win64/flowd_double.o Obj_Win64/flowd_double_in.o Obj_Win64/flowd_double_out.o Obj_Win64/flowup.o Obj_Win64/flowup_double.o Obj_Win64/flowup_double_in.o Obj_Win64/flowup_double_out.o Obj_Win64/fltce.o Obj_Win64/fracbslos.o Obj_Win64/fracis.o Obj_Win64/frem.o Obj_Win64/froota.o Obj_Win64/fsfunc.o Obj_Win64/getdiff.o Obj_Win64/getsoilprop.o Obj_Win64/getswc.o Obj_Win64/getwth.o Obj_Win64/gpdf.o Obj_Win64/grazin.o Obj_Win64/grazrst.o Obj_Win64/grem.o Obj_Win64/grochk.o Obj_Win64/growth.o Obj_Win64/h2oflux.o Obj_Win64/harvin.o Obj_Win64/harvst.o Obj_Win64/hwdrain.o Obj_Win64/initdaily.o Obj_Win64/initialize.o Obj_Win64/initlyrs.o Obj_Win64/initprod.o Obj_Win64/initsite_tg.o Obj_Win64/initsrad.o Obj_Win64/initsw.o Obj_Win64/inprac.o Obj_Win64/irrgin.o Obj_Win64/irrigt.o Obj_Win64/killrt.o Obj_Win64/lacalc.o Obj_Win64/laprod.o Obj_Win64/leachdly.o Obj_Win64/leafa.o Obj_Win64/line.o Obj_Win64/litburn.o Obj_Win64/litdec.o Obj_Win64/litstcrev.o Obj_Win64/livrem.o Obj_Win64/maxswpot.o Obj_Win64/message.o Obj_Win64/methane_emission.o Obj_Win64/methane_oxidation.o Obj_Win64/methane_production.o Obj_Win64/mnracc.o Obj_Win64/mthacc.o Obj_Win64/nitrify.o Obj_Win64/nox_pulse.o Obj_Win64/nscale.o Obj_Win64/nutrlm.o Obj_Win64/omadin.o Obj_Win64/omadscale.o Obj_Win64/parse.o Obj_Win64/partit.o Obj_Win64/petrad.o Obj_Win64/pevapdly.o Obj_Win64/photodecomp.o Obj_Win64/phshift.o Obj_Win64/pi_funcs.o Obj_Win64/potbse.o Obj_Win64/potbst.o Obj_Win64/potcrp.o Obj_Win64/potfor.o Obj_Win64/potprod.o Obj_Win64/pprdwc.o Obj_Win64/prcgrw.o Obj_Win64/prelim.o Obj_Win64/pschem.o Obj_Win64/pteevap.o Obj_Win64/rainflux.o Obj_Win64/ramp.o Obj_Win64/readblk.o Obj_Win64/respir.o Obj_Win64/restrp.o Obj_Win64/rtimp.o Obj_Win64/savarp.o Obj_Win64/schedl.o Obj_Win64/setamov.o Obj_Win64/setasmos.o Obj_Win64/setlyrs.o Obj_Win64/showlyrs.o Obj_Win64/showminrl.o Obj_Win64/simsom.o Obj_Win64/sitein.o Obj_Win64/sitein_ext.o Obj_Win64/sitein_grid.o Obj_Win64/snowcent.o Obj_Win64/snowmodel.o Obj_Win64/soilos.o Obj_Win64/soiltemp.o Obj_Win64/soiltransp.o Obj_Win64/somdec.o Obj_Win64/sumcar.o Obj_Win64/surftemp.o Obj_Win64/svapor.o Obj_Win64/swpotentl.o Obj_Win64/tanfunc.o Obj_Win64/tcalc.o Obj_Win64/tgmodel.o Obj_Win64/therm.o Obj_Win64/treeDynC.o Obj_Win64/treegrow.o Obj_Win64/treein.o Obj_Win64/trees.o Obj_Win64/tremin.o Obj_Win64/trwtavg.o Obj_Win64/updateN.o Obj_Win64/watrate.o Obj_Win64/watrbal.o Obj_Win64/watreqn.o Obj_Win64/watrflow.o Obj_Win64/watrlit.o Obj_Win64/watrstcr.o Obj_Win64/wdeath.o Obj_Win64/wfps.o Obj_Win64/wfunc_pulse.o Obj_Win64/woodec.o Obj_Win64/wrtbin.o Obj_Win64/wrtbio.o Obj_Win64/wrtcflows.o Obj_Win64/wrtco2.o Obj_Win64/wrtdaily.o Obj_Win64/wrtdcsip.o Obj_Win64/wrtdeadc.o Obj_Win64/wrtdels.o Obj_Win64/wrtextsite.o Obj_Win64/wrtdN2lyr.o Obj_Win64/wrtdN2Olyr.o Obj_Win64/wrtharvest.o Obj_Win64/wrtlivec.o Obj_Win64/wrtmethane.o Obj_Win64/wrtnflux.o Obj_Win64/wrtpsyn.o Obj_Win64/wrtresp.o Obj_Win64/wrtsoilc.o Obj_Win64/wrtsoiln.o Obj_Win64/wrtstemp.o Obj_Win64/wrtsummary.o Obj_Win64/wrtswc.o Obj_Win64/wrtsysc.o Obj_Win64/wrttgmonth.o Obj_Win64/wrtwflux.o Obj_Win64/wrtwfps.o Obj_Win64/wrtyearsum.o Obj_Win64/wrtyrcflows.o Obj_Win64/wthini.o  -static -lm
+Obj_Win64/csa_detiv.o:csa_detiv.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+Obj_Win64/csa_main.o:csa_main.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+Obj_Win64/dailymoist.o:dailymoist.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+Obj_Win64/default.o:default.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+Obj_Win64/getwth.o:getwth.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+Obj_Win64/simsom.o:simsom.f:(.data+0x0): multiple definition of `jdays'
+Obj_Win64/adjustpar.o:adjustpar.f:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status
+Makefile_Win64.txt:258: recipe for target 'DailyDayCent_muvp.exe' failed
+make: *** [DailyDayCent_muvp.exe] Error 1

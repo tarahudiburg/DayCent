@@ -1,0 +1,73 @@
+8/1/2018
+
+Melannie
+
+I have a fix for a bug in the maintenance respiration in treegrow.
+The bug generates a negative C storage, carbostg, when a non-growing tree is
+removed. Negative storage is a fatal error in livrem.
+(this is only the fatal part of a cluster of errors   :-) )
+
+The error in the maintenance respiration stems from the fact that
+respiration occurs in non-growing trees which removes C from storage but
+C is only added during active growth. A long period of non-growth will
+exhaust the storage pool. The removal can go negative at zero rleavc_opt
+but even if the intercept is zero, round-off error in the allocation of
+small amounts does the rest.
+
+
+The fix comes in 2 parts.
+1 make fmrsplai(2) the minimum value for the storage pool
+impact on respiration. My parameters make that value 0 at 0 leaf
+potential but there is no guarantee in the input of that intercept 
+it is possible to imagine a slope that would give a negative impact 0
+
+OLD CODE ==============================================
+        if (carbostg(FORSYS,UNLABL)+carbostg(FORSYS,LABELD) .lt. &
+            fmrsplai(3) * rleavc_opt) then
+          mrspReduce = &
+            line(carbostg(FORSYS,UNLABL)+carbostg(FORSYS,LABELD), &
+                 fmrsplai(1) * rleavc_opt, fmrsplai(2), &
+                 fmrsplai(3) * rleavc_opt, fmrsplai(4))
+        elseif (carbostg(FORSYS,UNLABL)+carbostg(FORSYS,LABELD) .gt. &
+                fmrsplai(5) * rleavc_opt) then
+          mrspReduce = fmrsplai(6)
+        else
+          mrspReduce = &
+            line(carbostg(FORSYS,UNLABL)+carbostg(FORSYS,LABELD), &
+                 fmrsplai(3) * rleavc_opt, fmrsplai(4), &
+                 fmrsplai(5) * rleavc_opt, fmrsplai(6))
+        endif
+
+NEW CODE ==============================================
+      cstor = sum(carbostg(FORSYS,:)) ! intermediate value
+
+        ! limit mrspReduce below the minimum value
+        if (cstor .le. fmrsplai(1) * rleavc_opt) then         ! minimum value
+          mrspReduce = fmrsplai(2)
+
+        elseif (cstor .ge. fmrsplai(5) * rleavc_opt) then     ! maximum value
+          mrspReduce = fmrsplai(6)
+
+        elseif (cstor .lt. fmrsplai(3) * rleavc_opt) then     ! first segment
+
+          mrspReduce = line(cstor, fmrsplai(1) * rleavc_opt, fmrsplai(2), &
+                                   fmrsplai(3) * rleavc_opt, fmrsplai(4))
+
+        else                                                  ! second segment
+          mrspReduce = line(cstor, fmrsplai(3) * rleavc_opt, fmrsplai(4), &
+                                   fmrsplai(5) * rleavc_opt, fmrsplai(6))
+        endif
+Of course, you have to type the new variable cstor
+
+
+
+2 The second fix is to set a maximum respiration of the storage pool
+OLD:          mrspdyflux(FORSYS) = sum(fmrspdyflux)
+
+NEW:          mrspdyflux(FORSYS) = max(sum(fmrspdyflux), cstor)
+
+The revised routine will be available later today
+
+Ken
+
+
